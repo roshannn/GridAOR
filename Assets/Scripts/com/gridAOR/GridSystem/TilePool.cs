@@ -6,17 +6,9 @@ public class TilePool : MonoBehaviour
 {
     [SerializeField] private TileFactory tileFactory;
     List<TileObject> pooledItems;
-    [SerializeField] private int count = 0;
     private void Awake()
     {
         pooledItems = new List<TileObject>();
-        //for(int i = 0; i < count; i++)
-        //{
-        //    TileObject tile = tileFactory.GetNewInstance();
-        //    tile.transform.SetParent(this.transform);
-        //    tile.gameObject.SetActive(false);
-        //    pooledItems.Add(tile);
-        //}
     }
 
     public TileObject GetTileFromPool()
